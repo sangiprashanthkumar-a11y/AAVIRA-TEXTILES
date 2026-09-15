@@ -1,1 +1,1943 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AAVIRA TEXTILES | Premium Sarees</title>
+
+<meta name="description" content="AAVIRA TEXTILES - Premium Indian Sarees">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: Georgia, "Times New Roman", serif;
+    background:#fffaf6;
+    color:#2b1b17;
+}
+
+button,
+input{
+    font-family:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+
+/* =========================
+   ANNOUNCEMENT
+========================= */
+
+.announcement{
+    background:#24130f;
+    color:#fff;
+    text-align:center;
+    padding:9px;
+    font-family:Arial,sans-serif;
+    font-size:13px;
+    letter-spacing:1px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    height:78px;
+    background:rgba(255,250,246,.96);
+    backdrop-filter:blur(10px);
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 6%;
+
+    border-bottom:1px solid #eaded7;
+}
+
+.logo{
+    font-size:27px;
+    font-weight:bold;
+    letter-spacing:4px;
+    color:#7b2724;
+}
+
+.logo small{
+    display:block;
+    font-size:8px;
+    letter-spacing:4px;
+    text-align:center;
+    color:#9a776b;
+    margin-top:3px;
+}
+
+nav{
+    display:flex;
+    gap:32px;
+    font-family:Arial,sans-serif;
+    font-size:14px;
+}
+
+nav a{
+    position:relative;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-7px;
+    width:0;
+    height:2px;
+    background:#9b3933;
+    transition:.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+.header-actions{
+    display:flex;
+    gap:10px;
+}
+
+.header-actions button{
+    width:40px;
+    height:40px;
+    border:1px solid #e4d4cd;
+    border-radius:50%;
+    background:white;
+    font-size:17px;
+}
+
+.cart-button{
+    position:relative;
+}
+
+.cart-count{
+    position:absolute;
+    top:-5px;
+    right:-3px;
+
+    min-width:19px;
+    height:19px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#9b3933;
+    color:white;
+
+    border-radius:50%;
+    font:11px Arial;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:650px;
+
+    display:flex;
+    align-items:center;
+
+    padding:70px 8%;
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(37,18,14,.86),
+        rgba(37,18,14,.35),
+        rgba(37,18,14,.05)
+    ),
+    url("https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+}
+
+.hero-content{
+    max-width:600px;
+    color:white;
+}
+
+.hero-label{
+    font:13px Arial,sans-serif;
+    letter-spacing:4px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:76px;
+    line-height:.95;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:#f2c89e;
+    font-style:italic;
+}
+
+.hero p{
+    font:17px/1.7 Arial,sans-serif;
+    max-width:500px;
+    color:#f8e9df;
+    margin-bottom:35px;
+}
+
+.primary-btn{
+    display:inline-block;
+    padding:15px 30px;
+    background:#f2c89e;
+    color:#321a15;
+    border:none;
+    font:bold 12px Arial,sans-serif;
+    letter-spacing:2px;
+    transition:.3s;
+}
+
+.primary-btn:hover{
+    background:white;
+    transform:translateY(-3px);
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section{
+    padding:90px 7%;
+}
+
+.section-heading{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-heading span{
+    font:11px Arial,sans-serif;
+    letter-spacing:4px;
+    color:#a15d4f;
+}
+
+.section-heading h2{
+    font-size:43px;
+    margin-top:10px;
+}
+
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.category{
+    height:390px;
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.category img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.6s;
+}
+
+.category:hover img{
+    transform:scale(1.08);
+}
+
+.category::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        transparent 45%,
+        rgba(0,0,0,.7)
+    );
+}
+
+.category-text{
+    position:absolute;
+    z-index:2;
+    bottom:25px;
+    left:25px;
+    color:white;
+}
+
+.category-text h3{
+    font-size:25px;
+}
+
+.category-text p{
+    font:12px Arial,sans-serif;
+    margin-top:7px;
+    opacity:.9;
+}
+
+
+/* =========================
+   FILTERS
+========================= */
+
+.filters{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:40px;
+}
+
+.filter{
+    background:white;
+    border:1px solid #dfcec6;
+    padding:10px 20px;
+    border-radius:30px;
+    font:12px Arial,sans-serif;
+    transition:.3s;
+}
+
+.filter.active,
+.filter:hover{
+    background:#7b2724;
+    color:white;
+    border-color:#7b2724;
+}
+
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.product-card{
+    background:white;
+    border:1px solid #eaded7;
+    overflow:hidden;
+    position:relative;
+    transition:.35s;
+}
+
+.product-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(64,31,23,.1);
+}
+
+.product-image{
+    height:350px;
+    position:relative;
+    overflow:hidden;
+    background:#eee;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.product-card:hover .product-image img{
+    transform:scale(1.06);
+}
+
+.badge{
+    position:absolute;
+    top:14px;
+    left:14px;
+    background:#7b2724;
+    color:white;
+    padding:7px 11px;
+    font:10px Arial,sans-serif;
+    letter-spacing:1px;
+}
+
+.wishlist{
+    position:absolute;
+    top:12px;
+    right:12px;
+    width:38px;
+    height:38px;
+    border:0;
+    border-radius:50%;
+    background:white;
+    font-size:20px;
+}
+
+.product-info{
+    padding:18px;
+}
+
+.product-category{
+    font:10px Arial,sans-serif;
+    letter-spacing:2px;
+    color:#a16e62;
+}
+
+.product-name{
+    font-size:20px;
+    margin:7px 0;
+}
+
+.stars{
+    color:#b87938;
+    font:13px Arial,sans-serif;
+}
+
+.price{
+    margin-top:10px;
+}
+
+.current-price{
+    font:bold 18px Arial,sans-serif;
+}
+
+.old-price{
+    font:13px Arial,sans-serif;
+    text-decoration:line-through;
+    color:#999;
+    margin-left:7px;
+}
+
+.add-cart{
+    width:100%;
+    border:1px solid #7b2724;
+    background:#7b2724;
+    color:white;
+    padding:12px;
+    margin-top:15px;
+    font:bold 11px Arial,sans-serif;
+    letter-spacing:1px;
+    transition:.3s;
+}
+
+.add-cart:hover{
+    background:#4f1816;
+}
+
+
+/* =========================
+   PROMO
+========================= */
+
+.promo{
+    margin:30px 7% 90px;
+    min-height:380px;
+
+    display:flex;
+    align-items:center;
+
+    padding:60px;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(38,19,14,.8),
+        rgba(38,19,14,.25)
+    ),
+    url("https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+
+    color:white;
+}
+
+.promo-content{
+    max-width:520px;
+}
+
+.promo span{
+    font:11px Arial,sans-serif;
+    letter-spacing:4px;
+    color:#f2c89e;
+}
+
+.promo h2{
+    font-size:48px;
+    margin:15px 0;
+}
+
+.promo p{
+    font:15px/1.6 Arial,sans-serif;
+    margin-bottom:25px;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-top:1px solid #eaded7;
+    border-bottom:1px solid #eaded7;
+}
+
+.feature{
+    padding:35px 20px;
+    text-align:center;
+    border-right:1px solid #eaded7;
+}
+
+.feature:last-child{
+    border-right:0;
+}
+
+.feature-icon{
+    font-size:27px;
+    margin-bottom:10px;
+}
+
+.feature h3{
+    font-size:17px;
+}
+
+.feature p{
+    margin-top:7px;
+    font:12px Arial,sans-serif;
+    color:#806d66;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#24130f;
+    color:#eee;
+    padding:65px 7% 25px;
+    text-align:center;
+}
+
+.footer-logo{
+    font-size:30px;
+    letter-spacing:5px;
+}
+
+footer p{
+    margin:15px auto;
+    font:13px Arial,sans-serif;
+    color:#c9b8b1;
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin:30px 0;
+    font:12px Arial,sans-serif;
+}
+
+.copyright{
+    border-top:1px solid #49332d;
+    padding-top:25px;
+}
+
+
+/* =========================
+   CART
+========================= */
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    z-index:1999;
+    display:none;
+}
+
+.overlay.show{
+    display:block;
+}
+
+.cart{
+    position:fixed;
+    right:-450px;
+    top:0;
+    width:420px;
+    max-width:95%;
+    height:100vh;
+    background:#fffaf6;
+    z-index:2000;
+
+    display:flex;
+    flex-direction:column;
+
+    transition:.4s;
+}
+
+.cart.open{
+    right:0;
+}
+
+.cart-header{
+    padding:22px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #eaded7;
+}
+
+.cart-header h2{
+    font-size:25px;
+}
+
+.close-cart{
+    border:0;
+    background:none;
+    font-size:25px;
+}
+
+.cart-items{
+    flex:1;
+    overflow:auto;
+    padding:20px;
+}
+
+.empty{
+    text-align:center;
+    color:#89746c;
+    margin-top:70px;
+    font:14px Arial,sans-serif;
+}
+
+.cart-item{
+    display:flex;
+    gap:13px;
+    padding:15px 0;
+    border-bottom:1px solid #eaded7;
+}
+
+.cart-item img{
+    width:75px;
+    height:90px;
+    object-fit:cover;
+}
+
+.cart-item-info{
+    flex:1;
+}
+
+.cart-item-info h4{
+    font-size:16px;
+}
+
+.cart-item-info p{
+    margin-top:6px;
+    font:13px Arial,sans-serif;
+}
+
+.quantity{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    margin-top:10px;
+}
+
+.quantity button{
+    width:25px;
+    height:25px;
+    border:1px solid #d9c8c0;
+    background:white;
+}
+
+.remove{
+    border:0;
+    background:none;
+    color:#a33;
+    font:11px Arial;
+}
+
+.cart-bottom{
+    padding:20px;
+    border-top:1px solid #eaded7;
+}
+
+.total-row{
+    display:flex;
+    justify-content:space-between;
+    font:17px Arial,sans-serif;
+    margin-bottom:18px;
+}
+
+.checkout{
+    width:100%;
+    padding:15px;
+    border:0;
+    background:#7b2724;
+    color:white;
+    font:bold 12px Arial;
+    letter-spacing:1px;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-panel{
+    position:fixed;
+    top:78px;
+    left:0;
+    right:0;
+    background:white;
+    z-index:999;
+    padding:20px 7%;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    display:none;
+}
+
+.search-panel.show{
+    display:block;
+}
+
+.search-panel input{
+    width:100%;
+    padding:16px;
+    border:1px solid #ddccc4;
+    outline:none;
+    font-size:16px;
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.menu-btn{
+    display:none;
+    border:0;
+    background:none;
+    font-size:24px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+
+    nav{
+        display:none;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .category-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .features{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .feature{
+        border-bottom:1px solid #eaded7;
+    }
+
+    .hero h1{
+        font-size:60px;
+    }
+}
+
+
+@media(max-width:600px){
+
+    .announcement{
+        font-size:10px;
+    }
+
+    header{
+        height:68px;
+        padding:0 5%;
+    }
+
+    .logo{
+        font-size:21px;
+        letter-spacing:3px;
+    }
+
+    .logo small{
+        font-size:6px;
+    }
+
+    .header-actions button{
+        width:34px;
+        height:34px;
+        font-size:14px;
+    }
+
+    .hero{
+        min-height:560px;
+        padding:50px 7%;
+    }
+
+    .hero h1{
+        font-size:50px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .section{
+        padding:65px 5%;
+    }
+
+    .section-heading h2{
+        font-size:32px;
+    }
+
+    .category-grid{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
+
+    .category{
+        height:260px;
+    }
+
+    .category-text{
+        left:15px;
+        bottom:15px;
+    }
+
+    .category-text h3{
+        font-size:18px;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
+
+    .product-image{
+        height:245px;
+    }
+
+    .product-info{
+        padding:12px;
+    }
+
+    .product-name{
+        font-size:16px;
+    }
+
+    .current-price{
+        font-size:15px;
+    }
+
+    .promo{
+        margin:10px 5% 65px;
+        min-height:350px;
+        padding:35px 25px;
+    }
+
+    .promo h2{
+        font-size:36px;
+    }
+
+    .features{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .feature{
+        padding:25px 10px;
+    }
+
+    .footer-links{
+        gap:15px;
+        flex-wrap:wrap;
+    }
+
+    .cart{
+        width:100%;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ANNOUNCEMENT -->
+
+<div class="announcement">
+    ✨ FREE SHIPPING ON ORDERS ABOVE ₹999 &nbsp; | &nbsp; COD AVAILABLE
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <a href="#" class="logo">
+        AAVIRA
+        <small>TEXTILES</small>
+    </a>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#categories">Collections</a>
+        <a href="#shop">Sarees</a>
+        <a href="#offers">Offers</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <div class="header-actions">
+
+        <button onclick="toggleSearch()" title="Search">
+            🔍
+        </button>
+
+        <button title="Wishlist">
+            ♡
+        </button>
+
+        <button
+            class="cart-button"
+            onclick="openCart()"
+            title="Cart"
+        >
+            🛍️
+            <span id="cartCount" class="cart-count">0</span>
+        </button>
+
+        <button class="menu-btn">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- SEARCH -->
+
+<div id="searchPanel" class="search-panel">
+
+    <input
+        id="searchInput"
+        type="text"
+        placeholder="Search sarees..."
+        oninput="searchProducts()"
+    >
+
+</div>
+
+
+<!-- HERO -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-label">
+            AAVIRA TEXTILES
+        </div>
+
+        <h1>
+            Elegance<br>
+            <span>Woven</span> For You
+        </h1>
+
+        <p>
+            Discover timeless sarees crafted with
+            beautiful colours, elegant designs and
+            the charm of Indian tradition.
+        </p>
+
+        <a href="#shop" class="primary-btn">
+            EXPLORE COLLECTION
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section id="categories" class="section">
+
+    <div class="section-heading">
+
+        <span>EXPLORE OUR WORLD</span>
+
+        <h2>Shop By Collection</h2>
+
+    </div>
+
+
+    <div class="category-grid">
+
+
+        <div class="category" onclick="filterProducts('Silk')">
+
+            <img
+                src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=80"
+                alt="Silk Sarees"
+            >
+
+            <div class="category-text">
+                <h3>Silk Sarees</h3>
+                <p>TIMELESS LUXURY →</p>
+            </div>
+
+        </div>
+
+
+        <div class="category" onclick="filterProducts('Cotton')">
+
+            <img
+                src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80"
+                alt="Cotton Sarees"
+            >
+
+            <div class="category-text">
+                <h3>Cotton Sarees</h3>
+                <p>EVERYDAY ELEGANCE →</p>
+            </div>
+
+        </div>
+
+
+        <div class="category" onclick="filterProducts('Designer')">
+
+            <img
+                src="https://images.unsplash.com/photo-1610189012906-6f5e5d3a3f4f?auto=format&fit=crop&w=800&q=80"
+                alt="Designer Sarees"
+            >
+
+            <div class="category-text">
+                <h3>Designer</h3>
+                <p>MAKE A STATEMENT →</p>
+            </div>
+
+        </div>
+
+
+        <div class="category" onclick="filterProducts('Party Wear')">
+
+            <img
+                src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=800&q=80"
+                alt="Party Wear Sarees"
+            >
+
+            <div class="category-text">
+                <h3>Party Wear</h3>
+                <p>CELEBRATE IN STYLE →</p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- SHOP -->
+
+<section id="shop" class="section">
+
+    <div class="section-heading">
+
+        <span>CURATED FOR YOU</span>
+
+        <h2>Featured Sarees</h2>
+
+    </div>
+
+
+    <div class="filters">
+
+        <button
+            class="filter active"
+            onclick="filterProducts('All')"
+        >
+            All
+        </button>
+
+        <button
+            class="filter"
+            onclick="filterProducts('Silk')"
+        >
+            Silk
+        </button>
+
+        <button
+            class="filter"
+            onclick="filterProducts('Cotton')"
+        >
+            Cotton
+        </button>
+
+        <button
+            class="filter"
+            onclick="filterProducts('Designer')"
+        >
+            Designer
+        </button>
+
+        <button
+            class="filter"
+            onclick="filterProducts('Party Wear')"
+        >
+            Party Wear
+        </button>
+
+    </div>
+
+
+    <div id="productGrid" class="product-grid"></div>
+
+</section>
+
+
+<!-- OFFER -->
+
+<section id="offers" class="promo">
+
+    <div class="promo-content">
+
+        <span>FESTIVE EDIT 2026</span>
+
+        <h2>
+            Celebrate Every Moment
+        </h2>
+
+        <p>
+            Discover our festive collection and
+            enjoy special prices on selected sarees.
+        </p>
+
+        <a href="#shop" class="primary-btn">
+            SHOP NOW
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section id="about">
+
+    <div class="features">
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ✦
+            </div>
+
+            <h3>Premium Quality</h3>
+
+            <p>
+                Carefully selected fabrics
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🚚
+            </div>
+
+            <h3>Fast Delivery</h3>
+
+            <p>
+                Delivered safely to your door
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ↩
+            </div>
+
+            <h3>Easy Returns</h3>
+
+            <p>
+                Simple customer support
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ♡
+            </div>
+
+            <h3>Made With Love</h3>
+
+            <p>
+                Indian tradition & style
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-logo">
+        AAVIRA TEXTILES
+    </div>
+
+    <p>
+        Premium sarees inspired by Indian tradition.
+    </p>
+
+    <div class="footer-links">
+
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#categories">Collections</a>
+        <a href="#about">About</a>
+        <a href="#">Contact</a>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 AAVIRA TEXTILES. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- CART OVERLAY -->
+
+<div
+    id="overlay"
+    class="overlay"
+    onclick="closeCart()"
+></div>
+
+
+<!-- CART -->
+
+<aside id="cart" class="cart">
+
+    <div class="cart-header">
+
+        <h2>
+            Your Cart
+        </h2>
+
+        <button
+            class="close-cart"
+            onclick="closeCart()"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div id="cartItems" class="cart-items">
+
+        <div class="empty">
+            Your cart is empty.
+        </div>
+
+    </div>
+
+
+    <div class="cart-bottom">
+
+        <div class="total-row">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="cartTotal">
+                ₹0
+            </strong>
+
+        </div>
+
+        <button
+            class="checkout"
+            onclick="checkout()"
+        >
+            PROCEED TO CHECKOUT
+        </button>
+
+    </div>
+
+</aside>
+
+
+<script>
+
+/* =========================
+   PRODUCTS
+========================= */
+
+const products = [
+
+    {
+        id:1,
+        name:"Royal Kanjivaram Silk Saree",
+        category:"Silk",
+        price:2499,
+        oldPrice:3299,
+        image:"https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=900&q=85"
+    },
+
+    {
+        id:2,
+        name:"Classic Banarasi Silk Saree",
+        category:"Silk",
+        price:2899,
+        oldPrice:3799,
+        image:"https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=85"
+    },
+
+    {
+        id:3,
+        name:"Elegant Handloom Cotton Saree",
+        category:"Cotton",
+        price:1299,
+        oldPrice:1699,
+        image:"https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=900&q=85"
+    },
+
+    {
+        id:4,
+        name:"Soft Cotton Daily Wear Saree",
+        category:"Cotton",
+        price:999,
+        oldPrice:1399,
+        image:"https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=900&q=85"
+    },
+
+    {
+        id:5,
+        name:"Designer Embroidered Saree",
+        category:"Designer",
+        price:1999,
+        oldPrice:2799,
+        image:"https://images.unsplash.com/photo-1610189012906-6f5e5d3a3f4f?auto=format&fit=crop&w=900&q=85"
+    },
+
+    {
+        id:6,
+        name:"Premium Georgette Designer Saree",
+        category:"Designer",
+        price:1799,
+        oldPrice:2499,
+        image:"https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=85"
+    },
+
+    {
+        id:7,
+        name:"Festive Party Wear Saree",
+        category:"Party Wear",
+        price:2199,
+        oldPrice:2999,
+        image:"https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=900&q=85"
+    },
+
+    {
+        id:8,
+        name:"Elegant Celebration Saree",
+        category:"Party Wear",
+        price:2399,
+        oldPrice:3199,
+        image:"https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=900&q=85"
+    }
+
+];
+
+
+/* =========================
+   CART
+========================= */
+
+let cart = JSON.parse(
+    localStorage.getItem("aaviraCart")
+) || [];
+
+
+/* =========================
+   DISPLAY PRODUCTS
+========================= */
+
+function displayProducts(list){
+
+    const grid =
+        document.getElementById("productGrid");
+
+    if(list.length === 0){
+
+        grid.innerHTML = `
+            <p style="
+                grid-column:1/-1;
+                text-align:center;
+                padding:50px;
+                font-family:Arial;
+            ">
+                No sarees found.
+            </p>
+        `;
+
+        return;
+    }
+
+
+    grid.innerHTML = list.map(product => `
+
+        <article class="product-card">
+
+            <div class="product-image">
+
+                <span class="badge">
+                    NEW
+                </span>
+
+                <button
+                    class="wishlist"
+                    onclick="toggleWishlist(this)"
+                >
+                    ♡
+                </button>
+
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="product-info">
+
+                <div class="product-category">
+                    ${product.category}
+                </div>
+
+                <h3 class="product-name">
+                    ${product.name}
+                </h3>
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <div class="price">
+
+                    <span class="current-price">
+                        ₹${product.price.toLocaleString("en-IN")}
+                    </span>
+
+                    <span class="old-price">
+                        ₹${product.oldPrice.toLocaleString("en-IN")}
+                    </span>
+
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart(${product.id})"
+                >
+                    ADD TO CART
+                </button>
+
+            </div>
+
+        </article>
+
+    `).join("");
+}
+
+
+/* =========================
+   FILTER
+========================= */
+
+function filterProducts(category){
+
+    document
+        .querySelectorAll(".filter")
+        .forEach(button => {
+
+            button.classList.remove("active");
+
+            if(
+                button.textContent.trim()
+                === category
+            ){
+                button.classList.add("active");
+            }
+
+        });
+
+
+    let filtered;
+
+    if(category === "All"){
+        filtered = products;
+    }
+    else{
+        filtered = products.filter(
+            product =>
+                product.category === category
+        );
+    }
+
+
+    displayProducts(filtered);
+
+
+    document
+        .getElementById("shop")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+function toggleSearch(){
+
+    document
+        .getElementById("searchPanel")
+        .classList.toggle("show");
+
+    if(
+        document
+        .getElementById("searchPanel")
+        .classList.contains("show")
+    ){
+
+        document
+            .getElementById("searchInput")
+            .focus();
+
+    }
+
+}
+
+
+function searchProducts(){
+
+    const value =
+        document
+        .getElementById("searchInput")
+        .value
+        .toLowerCase()
+        .trim();
+
+
+    const filtered =
+        products.filter(product =>
+
+            product.name
+                .toLowerCase()
+                .includes(value)
+
+            ||
+
+            product.category
+                .toLowerCase()
+                .includes(value)
+
+        );
+
+
+    displayProducts(filtered);
+
+}
+
+
+/* =========================
+   ADD CART
+========================= */
+
+function addToCart(id){
+
+    const product =
+        products.find(
+            item => item.id === id
+        );
+
+
+    const existing =
+        cart.find(
+            item => item.id === id
+        );
+
+
+    if(existing){
+        existing.quantity++;
+    }
+    else{
+
+        cart.push({
+
+            ...product,
+
+            quantity:1
+
+        });
+
+    }
+
+
+    saveCart();
+
+    openCart();
+
+}
+
+
+/* =========================
+   SAVE CART
+========================= */
+
+function saveCart(){
+
+    localStorage.setItem(
+        "aaviraCart",
+        JSON.stringify(cart)
+    );
+
+    updateCart();
+
+}
+
+
+/* =========================
+   UPDATE CART
+========================= */
+
+function updateCart(){
+
+    const count =
+        cart.reduce(
+            (total,item) =>
+                total + item.quantity,
+            0
+        );
+
+
+    document
+        .getElementById("cartCount")
+        .textContent = count;
+
+
+    const container =
+        document.getElementById("cartItems");
+
+
+    if(cart.length === 0){
+
+        container.innerHTML = `
+            <div class="empty">
+                Your cart is empty.
+            </div>
+        `;
+
+        document
+            .getElementById("cartTotal")
+            .textContent = "₹0";
+
+        return;
+    }
+
+
+    container.innerHTML =
+        cart.map(item => `
+
+        <div class="cart-item">
+
+            <img
+                src="${item.image}"
+                alt="${item.name}"
+            >
+
+            <div class="cart-item-info">
+
+                <h4>
+                    ${item.name}
+                </h4>
+
+                <p>
+                    ₹${item.price.toLocaleString("en-IN")}
+                </p>
+
+                <div class="quantity">
+
+                    <button
+                        onclick="changeQuantity(
+                            ${item.id},
+                            -1
+                        )"
+                    >
+                        −
+                    </button>
+
+                    <span>
+                        ${item.quantity}
+                    </span>
+
+                    <button
+                        onclick="changeQuantity(
+                            ${item.id},
+                            1
+                        )"
+                    >
+                        +
+                    </button>
+
+                    <button
+                        class="remove"
+                        onclick="removeFromCart(
+                            ${item.id}
+                        )"
+                    >
+                        Remove
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    `).join("");
+
+
+    const total =
+        cart.reduce(
+            (sum,item) =>
+                sum + item.price * item.quantity,
+            0
+        );
+
+
+    document
+        .getElementById("cartTotal")
+        .textContent =
+            "₹" + total.toLocaleString("en-IN");
+
+}
+
+
+/* =========================
+   QUANTITY
+========================= */
+
+function changeQuantity(id, change){
+
+    const item =
+        cart.find(
+            product => product.id === id
+        );
+
+
+    if(!item) return;
+
+
+    item.quantity += change;
+
+
+    if(item.quantity <= 0){
+
+        cart =
+            cart.filter(
+                product => product.id !== id
+            );
+
+    }
+
+
+    saveCart();
+
+}
+
+
+/* =========================
+   REMOVE
+========================= */
+
+function removeFromCart(id){
+
+    cart =
+        cart.filter(
+            item => item.id !== id
+        );
+
+    saveCart();
+
+}
+
+
+/* =========================
+   OPEN CART
+========================= */
+
+function openCart(){
+
+    document
+        .getElementById("cart")
+        .classList.add("open");
+
+    document
+        .getElementById("overlay")
+        .classList.add("show");
+
+}
+
+
+/* =========================
+   CLOSE CART
+========================= */
+
+function closeCart(){
+
+    document
+        .getElementById("cart")
+        .classList.remove("open");
+
+    document
+        .getElementById("overlay")
+        .classList.remove("show");
+
+}
+
+
+/* =========================
+   WISHLIST
+========================= */
+
+function toggleWishlist(button){
+
+    if(button.textContent.trim() === "♡"){
+
+        button.textContent = "♥";
+
+    }
+    else{
+
+        button.textContent = "♡";
+
+    }
+
+}
+
+
+/* =========================
+   CHECKOUT
+========================= */
+
+function checkout(){
+
+    if(cart.length === 0){
+
+        alert(
+            "Your cart is empty."
+        );
+
+        return;
+    }
+
+
+    alert(
+        "Checkout page will be connected next."
+    );
+
+}
+
+
+/* =========================
+   INITIAL LOAD
+========================= */
+
+displayProducts(products);
+
+updateCart();
+
+</script>
+
+</body>
+</html>
+```
 
